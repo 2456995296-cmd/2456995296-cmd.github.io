@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配手机端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业服装打板 | 定制化服装纸样设计</title>
+    <style>
+        /* 全局样式重置，避免不同浏览器显示差异 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        /* 导航栏样式 */
+        header {
+            background-color: #f8f5f0;
+            padding: 15px 0;
+            position: fixed; /* 导航栏固定在顶部 */
+            width: 100%;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #8b5a2b;
+        }
+        .nav-links a {
+            margin-left: 30px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .nav-links a:hover {
+            color: #8b5a2b;
+        }
+
+        /* 首页横幅样式 */
+        .hero {
+            background-color: #fdfaf6;
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .hero h1 {
+            font-size: 40px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+        .btn {
+            background-color: #8b5a2b;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #6d4421;
+        }
+
+        /* 通用内容容器样式 */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #333;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #8b5a2b;
+            margin: 15px auto;
+        }
+
+        /* 服务介绍样式 */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        .service-card h3 {
+            color: #8b5a2b;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* 业务范围样式 */
+        .business {
+            background-color: #f8f5f0;
+            padding: 60px 0;
+        }
+        .business-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .business-item {
+            background-color: white;
+            padding: 20px 30px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* 联系方式样式 */
+        .contact {
+            text-align: center;
+        }
+        .contact-info {
+            font-size: 18px;
+            line-height: 2.5;
+            color: #333;
+        }
+        .contact-info span {
+            color: #8b5a2b;
+            font-weight: bold;
+        }
+
+        /* 底部样式 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        /* 响应式适配（手机端） */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+            .nav-links {
+                display: none; /* 手机端隐藏导航链接，简化显示 */
+            }
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">匠心服装打板</div>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#service">服务介绍</a>
+                <a href="#business">业务范围</a>
+                <a href="#contact">联系方式</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首页横幅 -->
+    <section class="hero" id="home">
+        <h1>专业服装打板 · 精准纸样设计</h1>
+        <p>专注各类服装打板、纸样定制，根据你的设计稿/样衣精准还原版型，支持个性化调整，满足批量生产/私人定制需求，高效交付，品质保障。</p>
+        <a href="#contact" class="btn">立即咨询</a>
+    </section>
+
+    <!-- 服务介绍 -->
+    <section class="container" id="service">
+        <h2 class="section-title">我们的服务优势</h2>
+        <div class="services">
+            <div class="service-card">
+                <h3>精准还原</h3>
+                <p>根据设计图、样衣或口述需求，精准制作纸样，尺寸误差控制在0.5cm内，贴合你的设计初衷。</p>
+            </div>
+            <div class="service-card">
+                <h3>快速交付</h3>
+                <p>常规款式24-48小时交付初稿，支持加急处理，修改意见12小时内响应，不耽误你的生产进度。</p>
+            </div>
+            <div class="service-card">
+                <h3>全程沟通</h3>
+                <p>一对一沟通需求，从版型设计到修改确认，全程跟进，确保最终版型符合你的预期。</p>
+            </div>
+            <div class="service-card">
+                <h3>格式兼容</h3>
+                <p>支持PDF/PLT/DXF等多种纸样格式输出，适配各类裁剪设备，也可提供纸质版纸样邮寄。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 业务范围 -->
+    <section class="business" id="business">
+        <div class="container">
+            <h2 class="section-title">业务范围</h2>
+            <div class="business-list">
+                <div class="business-item">女装打板（连衣裙/衬衫/裤子/外套）</div>
+                <div class="business-item">男装打板（西装/衬衫/夹克/休闲裤）</div>
+                <div class="business-item">童装打板（婴幼儿/中大童全品类）</div>
+                <div class="business-item">特殊版型定制（大码/小众设计/舞台装）</div>
+                <div class="business-item">纸样修改/放码/排料</div>
+                <div class="business-item">样衣制作指导</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式（已修改为你的信息） -->
+    <section class="container contact" id="contact">
+        <h2 class="section-title">联系我们</h2>
+        <div class="contact-info">
+            <p>微信：<span>13571260431</span>（备注：服装打板）</p>
+            <p>电话：<span>13571260431</span></p>
+            <p>邮箱：<span>13571260431@163.com</span></p>
+            <p>服务区域：全国（线上沟通，文件/纸样邮寄）</p>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer>
+        <p>© 2026 匠心服装打板 - 所有权利保留</p>
+        <p style="margin-top: 10px; font-size: 14px;">专业专注 · 用心做好每一个版型</p>
+    </footer>
+
+    <script>
+        // 简单的平滑滚动效果（点击导航跳转到对应位置更丝滑）
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
